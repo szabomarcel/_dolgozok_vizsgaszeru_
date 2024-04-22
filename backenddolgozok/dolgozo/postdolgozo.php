@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($connection->connect_error) {
             die("Sikertelen kapcsolódás az adatbázishoz: " . $connection->connect_error);
         }
-        $sql = "INSERT INTO dolgozok (nev, neme, reszleg, belepesev, ber) VALUES ('?','?','?','?','?')";
+        $sql = "INSERT INTO dolgozok (nev, neme, reszleg, belepesev, ber) VALUES (?,?,?,?,?)";
         if ($stmt = $connection->prepare($sql)) {
             $stmt->bind_param("sssss", $nev, $neme, $reszleg, $belepesev, $ber);
             $nev = $_POST["nev"];

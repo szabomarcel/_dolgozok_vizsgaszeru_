@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function(){
         <td>${dolgozo.belepesev}</td>
         <td>${dolgozo.ber}</td>
         <td>
-            <button type="button" class="btn btn-outline-secondary" onclick="adatBetoltes(${dolgozo.nev}, '${dolgozo.neme}', '${dolgozo.reszleg}', '${dolgozo.belepesev}', '${dolgozo.ber}')"><i class="fa-regular fa-hand-point-left"></i>Kiválasztás</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="adatBetoltes('${dolgozo.nev}', '${dolgozo.neme}', '${dolgozo.reszleg}', '${dolgozo.belepesev}', '${dolgozo.ber}')"><i class="fa-regular fa-hand-point-left"></i>Kiválasztás</button>
             <button type="button" class="btn btn-outline-secondary" onclick="adatTorles(${dolgozo.nev}"><i class="fa-solid fa-trash"></i>Törlés</button>
         </td>
         </tr>`;
