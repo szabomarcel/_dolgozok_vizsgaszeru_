@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         $sql = "INSERT INTO dolgozok (nev, neme, reszleg, belepesev, ber) VALUES (?,?,?,?,?)";
         if ($stmt = $connection->prepare($sql)) {
-            $stmt->bind_param("sssss", $nev, $neme, $reszleg, $belepesev, $ber);
+            $stmt->bind_param("sssii", $nev, $neme, $reszleg, $belepesev, $ber);
             $nev = $_POST["nev"];
             $neme = $_POST["neme"];
             $reszleg = $_POST["reszleg"];

@@ -10,11 +10,11 @@
     $neme = $adatJSON->neme;
     $reszleg = $adatJSON->reszleg;
     $belepesev = $adatJSON->belepesev;
-    $reszleg = $adatJSON->reszleg;
+    $ber = $adatJSON->ber;
     require_once './databaseconnection.php';
     $sql = "UPDATE dolgozok SET neme=?, reszleg=?, belepesev=?, ber=? WHERE nev=?";
     $stml = $connection->prepare($sql);
-    $stml->bind_param("sssss", $neme, $reszleg, $belepesev, $ber, $nev);
+    $stml->bind_param("ssiis", $neme, $reszleg, $belepesev, $ber, $nev);
     if($stml->execute()){
         http_response_code(201);
         echo "Sikeres módosítás";
