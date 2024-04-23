@@ -1,5 +1,5 @@
-body, html {
+body{
     height: 125%;
     font-family: 'Open Sans', sans-serif;
-    background-image: linear-gradient(to right top, #4e44ad 90%, #3498db 100%);
+    background-image: linear-gradient(to top, #000 10%, #3498db, #4e44ad 100%);
 }
